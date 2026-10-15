@@ -37,7 +37,8 @@ Users should be able to:
 
 ### Screenshot
 Desktop:-
-![Uploading desktop.jpg…]()
+<img width="1920" height="827" alt="desktop" src="https://github.com/user-attachments/assets/b6eac20e-71e1-4abf-b2d4-0fb483b4dd8d" />
+
 Mobile:-
 <img width="987" height="825" alt="mobile" src="https://github.com/user-attachments/assets/60f6b65a-ecd6-4d49-9929-e52e1184b46d" />
 
