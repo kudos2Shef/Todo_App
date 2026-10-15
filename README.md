@@ -65,14 +65,22 @@ Mobile:-
 ### What I learned
 
 Designed and developed a full-stack Todo application to practice and demonstrate end-to-end web application development, from building the user interface to developing REST APIs, integrating a relational database, and deploying the application to the cloud.
+
 **Frontend Development:** Built the user interface using React and Vite, with separate views for All, Active, and Completed tasks to organize and manage todos.
 In case the status of task is active then changes can be made when entered. Functiona are made to ensure that on empty task description no record to be updated or created and the previous task description is maintained as well. 
+
 **Backend Development:** Developed RESTful APIs using Java and Spring Boot to handle task-related operations and connect the frontend with the database.
+
 **Database Integration:** Integrated PostgreSQL using Spring Data JPA for persistent storage and retrieval of todo records, including task descriptions, creation and update timestamps, and active status.
+
 **API Communication:** Connected the React frontend to the Spring Boot backend using HTTP requests and JSON data exchange.
+
 **Cloud Database:** Used Neon PostgreSQL as the hosted database, enabling the application backend to access persistent data outside the local development environment.
+
 **Live Deployment:** Deployed the React frontend on Netlify and the Spring Boot backend on Render, configuring production API URLs and environment-specific settings.
+
 **Routing Configuration:** Configured React Router navigation and Netlify redirects to support direct access to application routes such as /todo/all.
+
 **Deployment & Troubleshooting:** Worked through build configuration, environment variables, frontend-to-backend connectivity, CORS considerations, and deployment issues encountered during production setup.
 
 Frontend Api:- todo/all,todo/active,todo/completed
