@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+:root {
+    --Blue_500: hsl(220, 98%, 61%);
+    --Gray_50: hsl(0, 0%, 98%);
+    --Purple_300: hsl(234, 39%, 85%);
+    --Gray_300: hsl(233, 11%, 84%);
+    --Gray_600: hsl(236, 9%, 61%);
+    --Navy_850: hsl(235, 19%, 35%);
+    --Navy_950: hsl(235, 21%, 11%);
+    --Navy_900: hsl(235, 24%, 19%);
+    --Purple_600: hsl(235, 16%, 43%);
+    --Purple_100_hover: hsl(236, 33%, 92%);
+    --Purple_800: hsl(237, 14%, 26%);
+    --Purple_700: hsl(233, 14%, 35%);
+
+    --checkImg: url('../assets/icon-check.svg');
+    --Check_Background: linear-gradient(135deg, hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+
+}
+
+/* linear gradient is property of background-image or image*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Josefin Sans;
+    scroll-behavior: smooth;
+
+}
+
+
+.currElem {
+    color: var(--Blue_500);
+}
+
+.top,
+.topOne {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.topOne {
+    border-radius: 3px;
+    margin-top: 20px;
+
+}
+
+.top:first-child {
+    border-radius: 3px 3px 0 0;
+}
+
+
+
+.bottom {
+    max-height: 310px;
+    width: 100%;
+    margin-top: 30px;
+    /* box-shadow:2px 3px 10px var(--Navy_900); */
+}
+
+.top .desc,
+.topOne .desc {
+    flex: 0.8;
+    height: 31px;
+    font-size: 16px;
+    border: none;
+
+}
+
+.desc:focus {
+    outline: none;
+}
+
+.cross {
+    opacity: 0;
+}
+
+.top:hover .cross {
+    opacity: 1;
+}
+
+.cross:hover {
+    animation-name: rotat;
+    animation-duration: 3s;
+    cursor: pointer;
+}
+
+@keyframes rotat {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(1turn);
+        /*or 360deg*/
+    }
+}
+
+.darkTop,
+.darkTopOne {
+    background-color: var(--Navy_900);
+    border-bottom: 1px solid var(--Navy_850);
+
+}
+
+.darkTop input[type='checkbox'],
+.darkTopOne input[type='checkbox'] {
+    accent-color: var(--Navy_900);
+    background-color: var(--Navy_900);
+    appearance: none;
+    height: 28.5px;
+    width: 28.5px;
+    border: 1px solid var(--Navy_850);
+    background-image: none;
+    position: relative;
+    top: 0.9px;
+    left: 0.8px;
+}
+
+.darkTop input[type='checkbox']:checked {
+    background-image: var(--checkImg), var(--Check_Background);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+}
+
+
+.darkRad .checked {
+    background-image: var(--checkImg), var(--Check_Background);
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+
+
+.lightTop,
+.lightTopOne {
+    background-color: var(--Gray_50);
+    border-bottom: 1px solid var(--Purple_300);
+
+
+}
+
+.lightTop input[type='checkbox'],
+.lightTopOne input[type='checkbox'] {
+    accent-color: var(--Gray_50);
+    background-color: var(--Gray_50);
+    appearance: none;
+
+    height: 28.5px;
+    width: 28.5px;
+    border: 1px solid var(--Gray_300);
+    background-image: none;
+    position: relative;
+    top: 0.9px;
+    left: 0.8px;
+
+}
+
+.lightTop input[type='checkbox']:checked:hover,
+.darkTop input[type='checkbox']:checked:hover {
+    background-image: var(--checkImg), var(--Check_Background);
+}
+
+
+.lightTop input[type='checkbox']:checked {
+    background-image: var(--checkImg), var(--Check_Background);
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+
+}
+
+/* .lightTopOne input[type='checkbox'],.darkTopOne input[type='checkbox']{
+            margin: auto 20px;
+
+} */
+
+.dark .strike {
+    text-decoration: line-through;
+    color: var(--Purple_600) !important;
+    text-decoration-color: var(--Purple_300);
+
+}
+
+.light .strike {
+    text-decoration: line-through;
+    color: var(--Purple_300) !important;
+    color: var(--Gray_300) !important;
+    text-decoration-color: var(--Gray_300);
+    text-decoration-color: var(--Gray_600);
+
+
+}
+
+.top .rad,
+.topOne .rad {
+    flex: 0.1;
+    /* height: 28px; */
+    height: 30px;
+}
+
+.darkRad,
+.darkText {
+    background-color: var(--Navy_900);
+}
+
+
+.lightRad,
+.lightText {
+    background-color: var(--Gray_50);
+
+
+}
+
+.darkTop .darkText,
+input::placeholder {
+    color: var(--Purple_300);
+}
+
+.darkTopOne input::placeholder,
+.darkTop input::placeholder {
+    color: var(--Gray_600);
+}
+
+.darkTopOne .darkText {
+    color: var(--Purple_300);
+
+}
+
+.lightTop .lightText,
+input::placeholder {
+    color: var(--Purple_800);
+}
+
+.lightTopOne input::placeholder,
+.lightTop input::placeholder {
+    color: var(--Gray_600);
+}
+
+.lightTopOne .lightText {
+    color: var(--Purple_800);
+
+}
+
+.status {
+    height: 30px;
+    width: 30px;
+    height: 30px;
+    width: 28px;
+    border-radius: 50%;
+}
+
+.brdr,
+.gradient {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin: auto;
+
+
+}
+
+.gradient:hover {
+    background: var(--Check_Background);
+}
+
+
+input[type='checkbox']:hover {
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.lastBox {
+    width: 100%;
+    height: 40px;
+
+}
+
+
+.lastBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0 0 3px 3px;
+}
+
+.lastBox .time {
+    padding-left: 2px;
+    flex: 0.2;
+    text-align: center;
+}
+
+.lastBox .ls {
+    flex: 0.35;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.darkBox {
+    background-color: var(--Navy_900);
+    color: var(--Purple_600);
+}
+
+.lightBox {
+    background-color: var(--Gray_50);
+    color: var(--Gray_600);
+}
+
+.ls li:hover,
+.clear:hover {
+    cursor: pointer;
+}
+
+
+.ls li:nth-child(1),
+.ls li:nth-child(2) {
+    flex: 0.3;
+}
+
+.ls li:last-child {
+    flex: 0.5;
+}
+
+.lastBox .clear {
+    flex: 0.3;
+    text-align: center;
+}
+
+.li {
+    display: flex;
+    flex-flow: row;
+}
+
+.darkBox li:hover,
+.darkBox .clear:hover {
+    color: var(--Purple_100_hover);
+}
+
+.lightBox li:hover,
+.lightBox .clear:hover {
+    color: var(--Purple_800);
+}
+
+#showList {
+    max-height: 260px;
+    overflow-y: scroll;
+}
+
+.darkList {
+    scrollbar-color: var(--Purple_600) var(--Navy_900);
+}
+
+#showList:hover .darkList {
+    scrollbar-color: var(--Purple_600) var(--Navy_900);
+}
+
+.lightList {
+    scrollbar-color: var(--Gray_600) var(--Gray_50);
+}
+
+.attribution {
+    margin-top: 25px;
+
+    font-size: 1rem;
+    text-align: center;
+}
+
+.attribution a {
+    margin-top: 7px;
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+
+
+.darkFooter {
+    color: var(--Purple_700);
+}
+
+.lightFooter {
+    color: var(--Navy_850);
+}
+
+.darkFooter a:hover {
+    color: hsl(280, 87%, 65%);
+}
+
+.lightFooter a:hover {
+    color: hsl(280, 87%, 65%);
+}
+
+@media (max-width:500px) {
+
+    .top,
+    .topOne {
+        height: 45px;
+    }
+
+    .top .rad,
+    .topOne .rad {
+        height: 28px;
+    }
+
+    #showList {
+        max-height: 225px;
+    }
+
+    .top .desc,
+    .topOne .desc {
+        font-size: 15px;
+    }
+
+    .bottom {
+        max-height: 265px;
+
+    }
+
+    .lastBox {
+        height: 35px;
+    }
+
+    .attribution {
+        font-size: 15px;
+        margin-top: 35px;
+    }
+
+}

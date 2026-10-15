@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* width: 100vw;
+  height: 100vh; */
+  --Navy_950: hsl(235, 21%, 11%);
+  --Gray_50: hsl(0, 0%, 98%);
+  --Purple_300: hsl(234, 39%, 85%);
+  --Gray_300: hsl(233, 11%, 84%);
+
+  --light_mode_desk_url: url('../assets/bg-desktop-light.jpg');
+  --dark_mode_desk_url: url('../assets/bg-desktop-dark.jpg');
+  --light_mode_mob_url: url('../assets/bg-mobile-light.jpg');
+  --dark_mode_mob_url: url('../assets/bg-mobile-dark.jpg');
+  font-family: "Josefin Sans", sans-serif;
+
+}
+
+
+.box {
+  /* border: 1px solid red; */
+  height: 220px;
+  width: 100%;
+  display: flow-root;
+
+}
+
+.dark {
+  background-color: var(--Navy_950);
+  height: 100vh;
+}
+
+.light {
+  /* background-color: var(--Gray_300); */
+  background-color: var(--Purple_100_hover);
+
+  height: 100vh;
+}
+
+#dark_mode {
+  background-image: var(--dark_mode_desk_url);
+
+}
+
+#light_mode {
+  background-image: var(--light_mode_desk_url);
+
+}
+
+#sun:hover,
+#moon:hover {
+  cursor: pointer;
+}
+
+.content {
+  width: 600px;
+  /* border: 1px solid orange; */
+  margin: 30px auto;
+
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.head p {
+  font-size: 27px;
+  letter-spacing: 10px;
+  color: var(--Gray_50);
+  font-weight: 700;
+}
+
+
+@media (max-width:500px) {
+  #dark_mode {
+    background-image: var(--dark_mode_mob_url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+
+  }
+
+  #light_mode {
+    background-image: var(--light_mode_mob_url);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+
+  }
+
+  .content {
+    width: 85%;
+
+  }
+
+
+
+}
