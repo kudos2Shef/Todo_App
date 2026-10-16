@@ -41,10 +41,10 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
                 .then((data) => {
                     console.log('data', data);
                     // add or call toast container
-                    toast.success(data,{
-                        position:'top-center',
-                        autoClose:3000,// for 2seconds 
-                        theme:'colored'
+                    toast.success(data, {
+                        position: 'top-center',
+                        autoClose: 3000,// for 2seconds 
+                        theme: 'colored'
                     });
                     //
                     e.target.value = '';
@@ -105,11 +105,11 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
                 .then((data) => {
                     console.log('data', data);
                     onRefresh();
-                     // add or call toast container
-                    toast.success(data,{
-                        position:'top-center',
-                        autoClose:3000,// for 2seconds 
-                        theme:'colored'
+                    // add or call toast container
+                    toast.success(data, {
+                        position: 'top-center',
+                        autoClose: 3000,// for 2seconds 
+                        theme: 'colored'
                     });
                     //
                 })
@@ -157,13 +157,13 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
                 console.log('data', data);
                 // navigate('/todo/all'); // navigate does not refresh in sam epage
                 onRefresh();
-                 // add or call toast container
-                    toast.success(data,{
-                        position:'top-center',
-                        autoClose:3000,// for 2seconds 
-                        theme:'colored'
-                    });
-                    //
+                // add or call toast container
+                toast.success(data, {
+                    position: 'top-center',
+                    autoClose: 3000,// for 2seconds 
+                    theme: 'colored'
+                });
+                //
 
             })
     }
@@ -181,13 +181,13 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
             }).then((data) => {
                 console.log('data', data);
                 onRefresh();
-                 // add or call toast container
-                    toast.success(data,{
-                        position:'top-center',
-                        autoClose:3000,// for 2seconds 
-                        theme:'colored'
-                    });
-                    //
+                // add or call toast container
+                toast.success(data, {
+                    position: 'top-center',
+                    autoClose: 3000,// for 2seconds 
+                    theme: 'colored'
+                });
+                //
             })
     }
 
@@ -263,7 +263,7 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
                     </div>
                 )}
             </div>
-            {!loading && (<Footer currMode={currentMode} />)}
+            {/* {!loading && (<Footer currMode={currentMode} />)} */}
 
         </div>
     )

@@ -3,6 +3,7 @@ import './mode.css'
 import sun from '../assets/icon-sun.svg'
 import moon from '../assets/icon-moon.svg'
 import { Outlet } from 'react-router-dom'
+import Footer from './Footer'
 
 export default function Mode() {
   // const [mode,setMode]= useState(true);
@@ -33,6 +34,10 @@ export default function Mode() {
           <div><Outlet context={{ currentMode: mode }} /></div>
 
         </div>
+
+        {/* {!loading && (<Footer currMode={currentMode} />)} */}
+        <Footer currMode={mode} />
+
       </div>
     </section>
   )

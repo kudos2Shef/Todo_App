@@ -386,11 +386,18 @@ input[type='checkbox']:hover {
 
 
 .darkFooter {
-    color: var(--Purple_700);
+    /* color: var(--Purple_700); */
+    /* when Footer in DataDiv.jsx*/
+       color: var(--Purple_300);
+    /* Now Footer in Mode.jsx*/
+
 }
 
 .lightFooter {
-    color: var(--Navy_850);
+    /* color: var(--Navy_850); */
+    /* when Footer in DataDiv.jsx*/
+    color: var(--Navy_950);
+    /* Now Footer in Mode.jsx*/
 }
 
 .darkFooter a:hover {
