@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './data.css'
@@ -6,7 +6,7 @@ import URL from '../Api/URL';
 import Cross from '../assets/icon-cross.svg'
 import Footer from './Footer'
 import { toast } from 'react-toastify';
-
+import { useOutletContext } from 'react-router-dom';
 export default function DataDiv({ currentMode, todo, count, onRefresh, loading, colors }) {
 
 
@@ -192,6 +192,7 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
     }
 
 
+
     // onchange function on empty val set to previous desc
 
     function checkDescription(prevDesc, e) {
@@ -215,6 +216,20 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
             e.target.value = prevDesc;
         }
     }
+
+    function loader() {
+        //  const notify = () => {
+        const vals = 'Waking Up Server';
+        toast(vals, {
+            autoClose: 8000,
+            position: 'top-center',
+            closeButton: false,
+            theme: 'colored'
+        });
+
+    }
+
+
 
     return (
         <div>
@@ -264,7 +279,6 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
                 )}
             </div>
             {/* {!loading && (<Footer currMode={currentMode} />)} */}
-
         </div>
     )
 }

@@ -80,6 +80,10 @@
   font-weight: 700;
 }
 
+.contentVal p,
+.contentVal p>span {
+  font-family: math;
+}
 
 @media (max-width:500px) {
   #dark_mode {

@@ -123,7 +123,10 @@ public class TodoController {
 			int rows = todoService.clearAllCompletedTasks();
 			return rows > 0
 					? ResponseEntity.ok("All Completed Tasks cleared")
-					: ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error Clearing Completed Tasks");
+					// : ResponseEntity.status(HttpStatus.BAD_REQUEST).body("Error Clearing
+					// Completed Tasks");
+					: ResponseEntity.ok("No Completed Task for clearance");
+
 		} catch (Exception e) {
 			log.info(" Exception clearCompleted  e:" + e);
 			e.printStackTrace();
@@ -171,6 +174,13 @@ public class TodoController {
 			throw new RuntimeException();
 		}
 
+	}
+
+	// check health status
+	@GetMapping("/health")
+	public String health() {
+		log.info("-- Health --");
+		return "UP";
 	}
 
 	/*

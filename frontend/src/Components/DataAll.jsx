@@ -7,17 +7,17 @@ import { useOutletContext } from 'react-router-dom';
 
 
 export default function DataAll() {
-    const { currentMode } = useOutletContext();
+    const { currentMode, serverStatus } = useOutletContext();
     const [desc, setDesc] = useState('');
     const [todo, setTodo] = useState([]);
     const [count, setCount] = useState(0);
     const [loading, setLoading] = useState(true);
-
-
     useEffect(() => {
-        all();
+        if (serverStatus) {
+            all();
+        }
 
-    }, [])
+    }, [serverStatus])
 
     function all() {
         setLoading(true);

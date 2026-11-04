@@ -6,7 +6,7 @@ import DataDiv from './DataDiv';
 import { useOutletContext } from 'react-router-dom';
 
 export default function DataActive() {
-    const { currentMode } = useOutletContext();
+    const { currentMode, serverStatus } = useOutletContext();
 
     const [desc, setDesc] = useState('');
     const [todo, setTodo] = useState([]);
@@ -14,8 +14,11 @@ export default function DataActive() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        active();
-    }, [])
+        if (serverStatus) {
+            active();
+        }
+    }, [serverStatus])
+    
     function active() {
         setLoading(true);
         console.log('function active running');

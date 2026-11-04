@@ -8,7 +8,7 @@ import { useOutletContext } from 'react-router-dom';
 
 export default function DataCompleted() {
 
-    const { currentMode } = useOutletContext();
+    const { currentMode, serverStatus } = useOutletContext();
 
     const [desc, setDesc] = useState('');
     const [todo, setTodo] = useState([]);
@@ -16,8 +16,10 @@ export default function DataCompleted() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        completed();
-    }, [])
+        if (serverStatus) {
+            completed();
+        }
+    }, [serverStatus])
 
     function completed() {
         setLoading(true)
