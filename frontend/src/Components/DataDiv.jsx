@@ -217,19 +217,6 @@ export default function DataDiv({ currentMode, todo, count, onRefresh, loading, 
         }
     }
 
-    function loader() {
-        //  const notify = () => {
-        const vals = 'Waking Up Server';
-        toast(vals, {
-            autoClose: 8000,
-            position: 'top-center',
-            closeButton: false,
-            theme: 'colored'
-        });
-
-    }
-
-
 
     return (
         <div>
